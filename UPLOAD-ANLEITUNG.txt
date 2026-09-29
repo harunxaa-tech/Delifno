@@ -1,0 +1,19 @@
+DELFINO MODERN – GITHUB PAGES 005
+=================================
+
+Diese ZIP ist für einen KOMPLETT LEEREN GitHub-Pages-Repository-Root vorbereitet.
+
+1. ZIP entpacken.
+2. Alle 11 sichtbaren Dateien aus dem entpackten Ordner auswählen.
+3. Direkt in den Hauptordner (Root) des GitHub-Repositories hochladen.
+4. Änderungen committen.
+5. GitHub Pages muss auf Branch "main" / Root (/) stehen.
+
+WICHTIG:
+- Keine PHP-/WordPress-Dateien mit hochladen.
+- Kein zusätzlicher Unterordner nötig.
+- index.html muss direkt im Hauptordner liegen.
+- CSS und JavaScript sind bereits direkt in den HTML-Dateien eingebettet.
+- Die Online-Bestellung öffnet das bestehende Bestellsystem unter eiscafe-delfino.de/bestellen/.
+
+Version: 005
