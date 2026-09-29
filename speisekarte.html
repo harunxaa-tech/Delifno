@@ -329,6 +329,26 @@ img{max-width:100%;display:block}
 .mobile-menu .mobile-call-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
 .mobile-orderbar.single-action{grid-template-columns:1fr;padding-left:16px;padding-right:16px}
 .mobile-orderbar.single-action .mobile-order-primary{width:100%}
+
+
+/* v007 integrated demo ordering */
+.order-anchor{scroll-margin-top:145px}
+.menu-item-order{display:flex;align-items:center;justify-content:flex-end;gap:14px;min-width:132px}
+.menu-item-order strong{font-size:13px;white-space:nowrap}
+.add-product-btn{width:46px;height:46px;flex:0 0 46px;border:0;border-radius:50%;background:var(--red);color:#fff;font-size:30px;font-weight:300;line-height:1;display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 22px rgba(201,71,57,.2);transition:transform .18s ease,box-shadow .18s ease}
+.add-product-btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(201,71,57,.26)}
+.add-product-btn:active{transform:scale(.95)}
+.cta-demo-copy{color:rgba(255,255,255,.76);max-width:540px;margin:18px 0 0;line-height:1.6}
+.compact-cta .btn{border:0;cursor:pointer}
+.demo-cart-bar{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:260;width:min(620px,calc(100vw - 28px));height:64px;border:0;border-radius:999px;background:var(--red);color:white;display:flex;align-items:center;gap:13px;padding:0 22px;box-shadow:0 18px 55px rgba(29,27,24,.28);font:inherit;cursor:pointer}
+.demo-cart-icon{position:relative;font-size:21px;display:flex;align-items:center}.demo-cart-icon b{position:absolute;top:-10px;right:-13px;min-width:21px;height:21px;padding:0 5px;border-radius:999px;background:var(--ink);display:grid;place-items:center;font-size:10px;color:#fff}.demo-cart-label{font-weight:850;font-size:14px}.demo-cart-bar>strong{margin-left:auto;font-size:14px}
+.cart-backdrop,.option-backdrop{position:fixed;inset:0;background:rgba(19,17,14,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:400}
+.cart-drawer{position:fixed;right:18px;top:18px;bottom:18px;width:min(480px,calc(100vw - 36px));z-index:410;background:var(--paper);border-radius:30px;box-shadow:0 30px 100px rgba(20,15,10,.28);transform:translateX(calc(100% + 40px));transition:transform .38s cubic-bezier(.2,.8,.2,1);overflow:hidden;display:flex;flex-direction:column}
+.cart-drawer.open{transform:none}.cart-drawer-head{padding:25px 25px 18px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line)}.cart-drawer-head h2,.checkout-title h2,.cart-step-success h2,.option-sheet h2{font-family:Georgia,"Times New Roman",serif;font-size:38px;font-weight:400;letter-spacing:-.035em;margin:4px 0 0}.cart-kicker{text-transform:uppercase;letter-spacing:.15em;font-size:9px;font-weight:900;color:var(--red)}.cart-close,.option-close{width:44px;height:44px;border:1px solid var(--line);background:transparent;border-radius:50%;font-size:27px;color:var(--ink);cursor:pointer}.cart-step{padding:20px 25px 25px;overflow-y:auto;min-height:0;flex:1}.cart-demo-note{display:flex;justify-content:space-between;gap:12px;padding:13px 15px;border-radius:15px;background:#efe5d7;margin-bottom:18px}.cart-demo-note strong{font-size:11px}.cart-demo-note span{font-size:10px;color:var(--muted);text-align:right}.cart-lines{display:grid}.cart-line{display:grid;grid-template-columns:1fr auto;gap:12px;padding:17px 0;border-bottom:1px solid var(--line)}.cart-line h3{font-family:Georgia,"Times New Roman",serif;font-size:19px;font-weight:400;margin:0 0 4px}.cart-line small{display:block;color:var(--muted);font-size:10px}.cart-line-price{font-weight:850;font-size:12px;white-space:nowrap}.cart-line-bottom{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between}.qty-control{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:999px;padding:3px}.qty-control button{width:31px;height:31px;border:0;border-radius:50%;background:transparent;font-size:19px;cursor:pointer}.qty-control span{min-width:24px;text-align:center;font-weight:800;font-size:12px}.remove-line{border:0;background:transparent;color:var(--muted);font-weight:750;font-size:10px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}.cart-empty{text-align:center;padding:48px 24px}.cart-empty>span{font-size:42px}.cart-empty h3{font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:400;margin:15px 0 7px}.cart-empty p{color:var(--muted);font-size:12px;line-height:1.55;margin:0}.cart-summary{border-top:1px solid var(--line);padding-top:17px;margin-top:8px}.cart-summary>div,.checkout-total{display:flex;align-items:center;justify-content:space-between}.cart-summary span,.checkout-total span{font-size:12px;color:var(--muted)}.cart-summary strong,.checkout-total strong{font-size:20px}.cart-summary small{display:block;color:var(--muted);font-size:9.5px;line-height:1.45;margin-top:8px}.cart-primary,.cart-secondary{width:100%;min-height:54px;border-radius:999px;font-weight:850;font-size:13px;cursor:pointer;margin-top:14px}.cart-primary{border:0;background:var(--red);color:white}.cart-primary:disabled{opacity:.35;cursor:not-allowed}.cart-secondary{border:1px solid var(--line);background:transparent;color:var(--ink);margin-top:8px}.checkout-back{border:0;background:transparent;padding:0;color:var(--muted);font-weight:800;font-size:11px;cursor:pointer}.checkout-title{margin:26px 0 22px}.checkout-title p{color:var(--muted);font-size:11px;line-height:1.55}.checkout-form{display:grid;gap:14px}.checkout-form label{display:grid;gap:7px}.checkout-form label>span{font-size:10px;font-weight:850;color:var(--muted)}.checkout-form input,.checkout-form select,.checkout-form textarea{width:100%;border:1px solid var(--line);border-radius:14px;background:white;padding:13px 14px;font:inherit;font-size:14px;color:var(--ink);outline:none}.checkout-form input,.checkout-form select{height:49px}.checkout-form input:focus,.checkout-form select:focus,.checkout-form textarea:focus{border-color:rgba(29,27,24,.5);box-shadow:0 0 0 3px rgba(29,27,24,.06)}.checkout-total{padding:18px 0 3px;border-top:1px solid var(--line);margin-top:4px}.cart-step-success{text-align:center;padding-top:54px}.demo-success-icon{width:66px;height:66px;border-radius:50%;background:var(--green);color:white;display:grid;place-items:center;font-size:29px;margin:0 auto 22px}.cart-step-success>p{color:var(--muted);font-size:12px;line-height:1.55}.demo-order-summary{text-align:left;background:white;border:1px solid var(--line);border-radius:18px;padding:16px;margin:24px 0}.demo-order-summary p{margin:0 0 8px;font-size:11px}.demo-order-summary ul{padding:0;margin:12px 0 0;list-style:none;border-top:1px solid var(--line)}.demo-order-summary li{display:flex;justify-content:space-between;gap:15px;padding:9px 0;border-bottom:1px solid var(--line);font-size:10.5px}.option-backdrop{z-index:430}.option-sheet{position:fixed;z-index:440;left:50%;bottom:18px;transform:translate(-50%,calc(100% + 50px));width:min(540px,calc(100vw - 28px));padding:24px;background:var(--paper);border-radius:28px;box-shadow:0 26px 90px rgba(20,15,10,.3);transition:transform .34s cubic-bezier(.2,.8,.2,1)}.option-sheet.open{transform:translate(-50%,0)}.option-handle{display:none}.option-close{position:absolute;right:19px;top:19px}.option-sheet>p{color:var(--muted);font-size:12px}.option-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.option-buttons button{min-height:92px;border:1px solid var(--line);border-radius:18px;background:white;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;align-items:center;text-align:left;padding:16px;cursor:pointer;color:var(--ink)}.option-buttons button:hover{border-color:var(--ink)}.option-buttons span{font-family:Georgia,"Times New Roman",serif;font-size:21px}.option-buttons small{font-size:10px;color:var(--muted)}.option-buttons strong{grid-column:2;grid-row:1/3;font-size:13px}.cart-toast{position:fixed;left:50%;bottom:92px;transform:translate(-50%,16px);z-index:500;background:var(--ink);color:white;border-radius:999px;padding:11px 17px;font-size:11px;font-weight:800;opacity:0;pointer-events:none;transition:.25s}.cart-toast.show{opacity:1;transform:translate(-50%,0)}
+body.cart-open,body.option-open{overflow:hidden}
+@media(min-width:981px){.demo-cart-bar{left:auto;right:28px;transform:none;width:280px;bottom:28px}.cart-drawer{right:22px}.menu-content{padding-bottom:120px}}
+@media(max-width:680px){.menu-items article,.menu-items article:nth-child(odd),.menu-items article:nth-child(even){grid-template-columns:minmax(0,1fr) auto;gap:14px}.menu-item-order{min-width:90px;flex-direction:column;align-items:flex-end;gap:8px}.menu-item-order strong{font-size:12px}.add-product-btn{width:45px;height:45px;flex-basis:45px}.site-footer{padding-bottom:105px}.cart-drawer{inset:auto 0 0 0;width:100%;height:min(88vh,790px);border-radius:28px 28px 0 0;transform:translateY(105%)}.cart-drawer.open{transform:none}.cart-drawer-head{padding:20px 20px 15px}.cart-step{padding:17px 20px max(22px,env(safe-area-inset-bottom))}.option-sheet{bottom:0;width:100%;border-radius:28px 28px 0 0;padding:22px 20px max(25px,env(safe-area-inset-bottom));transform:translate(-50%,105%)}.option-handle{display:block;width:42px;height:4px;border-radius:10px;background:rgba(29,27,24,.18);margin:-10px auto 17px}.option-buttons{grid-template-columns:1fr}.demo-cart-bar{height:60px}.cta-band{padding-bottom:110px}}
+
 </style>
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -337,20 +357,21 @@ img{max-width:100%;display:block}
   <header class="site-header solid-header">
     <a class="brand" href="index.html" aria-label="Eiscafé Delfino Startseite"><span class="brand-mark">D</span><span class="brand-copy"><strong>Delfino</strong><small>Gelateria · Pizzeria</small></span></a>
     <nav class="desktop-nav" aria-label="Hauptnavigation"><a href="index.html#genuss">Genuss</a><a class="active" href="speisekarte.html">Speisekarte</a><a href="index.html#feiern">Feiern</a><a href="index.html#besuch">Besuch</a></nav>
-    <div class="header-actions"><a class="text-link hide-mobile" href="tel:+4989604061">089 604061</a><a class="btn btn-dark btn-small hide-mobile" href="https://eiscafe-delfino.de/bestellen/">Online bestellen</a><button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
+    <div class="header-actions"><a class="text-link hide-mobile" href="tel:+4989604061">089 604061</a><a class="btn btn-dark btn-small hide-mobile" href="#bestellen">Online bestellen</a><button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
   </header>
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true"><div class="mobile-menu-inner"><a href="index.html#genuss">Genuss</a><a href="speisekarte.html">Speisekarte</a><a href="index.html#feiern">Feiern</a><a href="index.html#besuch">Besuch</a><a class="btn btn-accent" href="https://eiscafe-delfino.de/bestellen/">Online bestellen</a><a class="btn btn-outline mobile-call-btn" href="tel:+4989604061">Anrufen</a></div></div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true"><div class="mobile-menu-inner"><a href="index.html#genuss">Genuss</a><a href="speisekarte.html">Speisekarte</a><a href="index.html#feiern">Feiern</a><a href="index.html#besuch">Besuch</a><a class="btn btn-accent" href="#bestellen">Online bestellen</a><a class="btn btn-outline mobile-call-btn" href="tel:+4989604061">Anrufen</a></div></div>
 
   <main>
     <section class="menu-hero">
       <div class="container">
         <p class="eyebrow reveal">Buon appetito</p>
         <h1 class="reveal">Speisekarte</h1>
-        <p class="reveal">Italienische Klassiker, direkt und ohne Schnickschnack. Bestellungen zur Abholung sind laut bestehender Website zwischen 11:30 und 20:30 Uhr möglich.</p>
-        <div class="menu-hero-actions reveal"><a class="btn btn-dark" href="https://eiscafe-delfino.de/bestellen/">Jetzt online bestellen</a><a class="btn btn-outline" href="tel:+4989604061">Telefonisch bestellen</a></div>
+        <p class="reveal">Speisekarte und Bestellung in einem: Gericht auswählen, direkt in den Warenkorb legen und die Abholung vorbereiten. In dieser Verkaufsdemo wird noch keine echte Bestellung übertragen.</p>
+        <div class="menu-hero-actions reveal"><a class="btn btn-dark" href="#bestellen">Jetzt auswählen</a><a class="btn btn-outline" href="tel:+4989604061">Telefonisch bestellen</a></div>
       </div>
     </section>
 
+    <div id="bestellen" class="order-anchor" aria-hidden="true"></div>
     <div class="menu-tabs-wrap">
       <div class="container menu-tabs" aria-label="Speisekarten-Kategorien">
         <button class="menu-tab active" data-filter="all">Alles</button>
@@ -367,65 +388,124 @@ img{max-width:100%;display:block}
         <section class="menu-category" id="antipasti" data-category="antipasti">
           <div class="menu-category-head"><span>01</span><h2>Antipasti</h2></div>
           <div class="menu-items">
-            <article><div><h3>Bruschetta Italiana</h3><p>Geröstetes Weißbrot · Tomaten · Rucola · Parmesan · Basilikum</p></div><strong>7,50 €</strong></article>
-            <article><div><h3>Mozzarella Caprese</h3><p>Mozzarella · Tomaten · Basilikum · Olivenöl</p></div><strong>8,90 €</strong></article>
-            <article><div><h3>Vitello tonnato</h3><p>Kalbfleisch · Thunfischcreme · Kapern</p></div><strong>13,00 €</strong></article>
-            <article><div><h3>Carpaccio di manzo</h3><p>Rindfleisch · Rucola · Parmesan</p></div><strong>14,50 €</strong></article>
+            <article class="orderable-item"><div><h3>Bruschetta Italiana</h3><p>Geröstetes Weißbrot · Tomaten · Rucola · Parmesan · Basilikum</p></div><div class="menu-item-order"><strong>7,50 €</strong><button class="add-product-btn" type="button" data-name="Bruschetta Italiana" data-category="antipasti" data-price="7.50" aria-label="Bruschetta Italiana zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Mozzarella Caprese</h3><p>Mozzarella · Tomaten · Basilikum · Olivenöl</p></div><div class="menu-item-order"><strong>8,90 €</strong><button class="add-product-btn" type="button" data-name="Mozzarella Caprese" data-category="antipasti" data-price="8.90" aria-label="Mozzarella Caprese zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Vitello tonnato</h3><p>Kalbfleisch · Thunfischcreme · Kapern</p></div><div class="menu-item-order"><strong>13,00 €</strong><button class="add-product-btn" type="button" data-name="Vitello tonnato" data-category="antipasti" data-price="13.00" aria-label="Vitello tonnato zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Carpaccio di manzo</h3><p>Rindfleisch · Rucola · Parmesan</p></div><div class="menu-item-order"><strong>14,50 €</strong><button class="add-product-btn" type="button" data-name="Carpaccio di manzo" data-category="antipasti" data-price="14.50" aria-label="Carpaccio di manzo zum Warenkorb hinzufügen">+</button></div></article>
           </div>
         </section>
 
         <section class="menu-category" id="pizza" data-category="pizza">
           <div class="menu-category-head"><span>02</span><h2>Pizza</h2><p>Normal 33 cm · Groß 40 cm</p></div>
           <div class="menu-items">
-            <article><div><h3>Margherita</h3><p>Tomatensauce · Mozzarella</p></div><strong>7,50 – 14,50 €</strong></article>
-            <article><div><h3>Regina</h3><p>Champignons · Hinterschinken</p></div><strong>9,50 – 16,50 €</strong></article>
-            <article><div><h3>Diavola</h3><p>Scharfe Salami</p></div><strong>10,00 – 17,00 €</strong></article>
-            <article><div><h3>Delfino</h3><p>Hinterschinken · schwarze Oliven · rote Zwiebeln</p></div><strong>10,50 – 17,50 €</strong></article>
-            <article><div><h3>Quattro Formaggi</h3><p>Parmesan · Mozzarella · Scamorza · Gorgonzola</p></div><strong>10,50 – 17,50 €</strong></article>
-            <article><div><h3>Gamberetti</h3><p>Shrimps · Zucchini · Cocktailtomaten · Knoblauch</p></div><strong>12,50 – 19,50 €</strong></article>
-            <article><div><h3>Salmone</h3><p>Räucherlachs · Cocktailtomaten · Rucola</p></div><strong>12,50 – 19,50 €</strong></article>
-            <article><div><h3>Scampi</h3><p>Scampi · Cocktailtomaten</p></div><strong>13,50 – 20,50 €</strong></article>
+            <article class="orderable-item"><div><h3>Margherita</h3><p>Tomatensauce · Mozzarella</p></div><div class="menu-item-order"><strong>7,50 – 14,50 €</strong><button class="add-product-btn" type="button" data-name="Margherita" data-category="pizza" data-price="7.50" data-price-large="14.50" aria-label="Margherita zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Regina</h3><p>Champignons · Hinterschinken</p></div><div class="menu-item-order"><strong>9,50 – 16,50 €</strong><button class="add-product-btn" type="button" data-name="Regina" data-category="pizza" data-price="9.50" data-price-large="16.50" aria-label="Regina zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Diavola</h3><p>Scharfe Salami</p></div><div class="menu-item-order"><strong>10,00 – 17,00 €</strong><button class="add-product-btn" type="button" data-name="Diavola" data-category="pizza" data-price="10.00" data-price-large="17.00" aria-label="Diavola zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Delfino</h3><p>Hinterschinken · schwarze Oliven · rote Zwiebeln</p></div><div class="menu-item-order"><strong>10,50 – 17,50 €</strong><button class="add-product-btn" type="button" data-name="Delfino" data-category="pizza" data-price="10.50" data-price-large="17.50" aria-label="Delfino zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Quattro Formaggi</h3><p>Parmesan · Mozzarella · Scamorza · Gorgonzola</p></div><div class="menu-item-order"><strong>10,50 – 17,50 €</strong><button class="add-product-btn" type="button" data-name="Quattro Formaggi" data-category="pizza" data-price="10.50" data-price-large="17.50" aria-label="Quattro Formaggi zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Gamberetti</h3><p>Shrimps · Zucchini · Cocktailtomaten · Knoblauch</p></div><div class="menu-item-order"><strong>12,50 – 19,50 €</strong><button class="add-product-btn" type="button" data-name="Gamberetti" data-category="pizza" data-price="12.50" data-price-large="19.50" aria-label="Gamberetti zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Salmone</h3><p>Räucherlachs · Cocktailtomaten · Rucola</p></div><div class="menu-item-order"><strong>12,50 – 19,50 €</strong><button class="add-product-btn" type="button" data-name="Salmone" data-category="pizza" data-price="12.50" data-price-large="19.50" aria-label="Salmone zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Scampi</h3><p>Scampi · Cocktailtomaten</p></div><div class="menu-item-order"><strong>13,50 – 20,50 €</strong><button class="add-product-btn" type="button" data-name="Scampi" data-category="pizza" data-price="13.50" data-price-large="20.50" aria-label="Scampi zum Warenkorb hinzufügen">+</button></div></article>
           </div>
         </section>
 
         <section class="menu-category" id="pasta" data-category="pasta">
           <div class="menu-category-head"><span>03</span><h2>Pasta</h2></div>
           <div class="menu-items">
-            <article><div><h3>Spaghetti Aglio e Olio</h3><p>Knoblauch · Olivenöl · Peperoncino</p></div><strong>8,50 €</strong></article>
-            <article><div><h3>Spaghetti Carbonara</h3><p>Speck · Ei · Parmesan</p></div><strong>10,50 €</strong></article>
-            <article><div><h3>Spaghetti Gamberetti</h3><p>Knoblauch · Olivenöl · Paprika · Garnelen</p></div><strong>14,50 €</strong></article>
-            <article><div><h3>Spaghetti Scampi</h3><p>Scampi · Cocktailtomaten</p></div><strong>15,90 €</strong></article>
-            <article><div><h3>Tagliatelle Salmone</h3><p>Lachs · Spinat</p></div><strong>12,50 €</strong></article>
-            <article><div><h3>Gnocchi Sorrentina</h3><p>Büffelmozzarella · Tomatensauce</p></div><strong>11,50 €</strong></article>
+            <article class="orderable-item"><div><h3>Spaghetti Aglio e Olio</h3><p>Knoblauch · Olivenöl · Peperoncino</p></div><div class="menu-item-order"><strong>8,50 €</strong><button class="add-product-btn" type="button" data-name="Spaghetti Aglio e Olio" data-category="pasta" data-price="8.50" aria-label="Spaghetti Aglio e Olio zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Spaghetti Carbonara</h3><p>Speck · Ei · Parmesan</p></div><div class="menu-item-order"><strong>10,50 €</strong><button class="add-product-btn" type="button" data-name="Spaghetti Carbonara" data-category="pasta" data-price="10.50" aria-label="Spaghetti Carbonara zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Spaghetti Gamberetti</h3><p>Knoblauch · Olivenöl · Paprika · Garnelen</p></div><div class="menu-item-order"><strong>14,50 €</strong><button class="add-product-btn" type="button" data-name="Spaghetti Gamberetti" data-category="pasta" data-price="14.50" aria-label="Spaghetti Gamberetti zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Spaghetti Scampi</h3><p>Scampi · Cocktailtomaten</p></div><div class="menu-item-order"><strong>15,90 €</strong><button class="add-product-btn" type="button" data-name="Spaghetti Scampi" data-category="pasta" data-price="15.90" aria-label="Spaghetti Scampi zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Tagliatelle Salmone</h3><p>Lachs · Spinat</p></div><div class="menu-item-order"><strong>12,50 €</strong><button class="add-product-btn" type="button" data-name="Tagliatelle Salmone" data-category="pasta" data-price="12.50" aria-label="Tagliatelle Salmone zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Gnocchi Sorrentina</h3><p>Büffelmozzarella · Tomatensauce</p></div><div class="menu-item-order"><strong>11,50 €</strong><button class="add-product-btn" type="button" data-name="Gnocchi Sorrentina" data-category="pasta" data-price="11.50" aria-label="Gnocchi Sorrentina zum Warenkorb hinzufügen">+</button></div></article>
           </div>
         </section>
 
         <section class="menu-category" id="panini" data-category="panini">
           <div class="menu-category-head"><span>04</span><h2>Panini</h2><p>Aus hausgemachtem Brot</p></div>
           <div class="menu-items">
-            <article><div><h3>Panino Caprese</h3><p>Frischkäse · Mozzarella · grüner Salat</p></div><strong>11,00 €</strong></article>
-            <article><div><h3>Panino Parma</h3><p>Frischkäse · Mozzarella · Salat · Parmaschinken</p></div><strong>11,00 €</strong></article>
-            <article><div><h3>Panino Tonno</h3><p>Thunfisch · Thunfischcreme · rote Zwiebeln · Tomate</p></div><strong>11,00 €</strong></article>
+            <article class="orderable-item"><div><h3>Panino Caprese</h3><p>Frischkäse · Mozzarella · grüner Salat</p></div><div class="menu-item-order"><strong>11,00 €</strong><button class="add-product-btn" type="button" data-name="Panino Caprese" data-category="panini" data-price="11.00" aria-label="Panino Caprese zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Panino Parma</h3><p>Frischkäse · Mozzarella · Salat · Parmaschinken</p></div><div class="menu-item-order"><strong>11,00 €</strong><button class="add-product-btn" type="button" data-name="Panino Parma" data-category="panini" data-price="11.00" aria-label="Panino Parma zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>Panino Tonno</h3><p>Thunfisch · Thunfischcreme · rote Zwiebeln · Tomate</p></div><div class="menu-item-order"><strong>11,00 €</strong><button class="add-product-btn" type="button" data-name="Panino Tonno" data-category="panini" data-price="11.00" aria-label="Panino Tonno zum Warenkorb hinzufügen">+</button></div></article>
           </div>
         </section>
 
         <section class="menu-category" id="eis" data-category="eis">
           <div class="menu-category-head"><span>05</span><h2>Gelato</h2></div>
           <div class="menu-items">
-            <article><div><h3>1 Kugel</h3><p>Im Becher · verschiedene Sorten</p></div><strong>2,00 €</strong></article>
-            <article><div><h3>2 Kugeln</h3><p>Im Becher · verschiedene Sorten</p></div><strong>4,00 €</strong></article>
+            <article class="orderable-item"><div><h3>1 Kugel</h3><p>Im Becher · verschiedene Sorten</p></div><div class="menu-item-order"><strong>2,00 €</strong><button class="add-product-btn" type="button" data-name="1 Kugel" data-category="eis" data-price="2.00" aria-label="1 Kugel zum Warenkorb hinzufügen">+</button></div></article>
+            <article class="orderable-item"><div><h3>2 Kugeln</h3><p>Im Becher · verschiedene Sorten</p></div><div class="menu-item-order"><strong>4,00 €</strong><button class="add-product-btn" type="button" data-name="2 Kugeln" data-category="eis" data-price="4.00" aria-label="2 Kugeln zum Warenkorb hinzufügen">+</button></div></article>
             <article class="menu-note"><div><h3>Sortenauswahl</h3><p>Amarena · Erdbeere · Haselnuss · Himbeere · Joghurt · Keks · Malaga · Mango · Maracuja · Pistazie · Schoko · Stracciatella · Vanille · Weiße Schokolade · Zitrone</p></div></article>
           </div>
         </section>
       </div>
     </section>
 
-    <section class="cta-band compact-cta"><div class="container cta-band-inner reveal"><div><p class="eyebrow light">Schon entschieden?</p><h2>Bestellen & abholen.</h2></div><a class="btn btn-light btn-xl" href="https://eiscafe-delfino.de/bestellen/">Online bestellen <span>↗</span></a></div></section>
+    <section class="cta-band compact-cta"><div class="container cta-band-inner reveal"><div><p class="eyebrow light">Schon entschieden?</p><h2>Alles auf einer Seite.</h2><p class="cta-demo-copy">Warenkorb und Abholdaten bleiben direkt im neuen Delfino-Auftritt.</p></div><button class="btn btn-light btn-xl js-open-cart" type="button">Warenkorb öffnen <span>↗</span></button></div></section>
   </main>
 
+
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-label="Delfino Warenkorb">
+    <div class="cart-drawer-head">
+      <div><span class="cart-kicker">Deine Auswahl</span><h2>Warenkorb</h2></div>
+      <button class="cart-close js-close-cart" type="button" aria-label="Warenkorb schließen">×</button>
+    </div>
+    <div class="cart-step cart-step-cart" data-cart-step="cart">
+      <div class="cart-demo-note"><strong>Verkaufsdemo</strong><span>Noch keine echte Übermittlung oder Bezahlung.</span></div>
+      <div class="cart-lines" id="cart-lines"></div>
+      <div class="cart-empty" id="cart-empty"><span>🍕</span><h3>Noch nichts ausgewählt</h3><p>Tippe bei Pizza, Pasta, Panini oder Gelato auf +.</p></div>
+      <div class="cart-summary">
+        <div><span>Zwischensumme</span><strong class="js-cart-total">0,00 €</strong></div>
+        <small>Abholung · Bezahlung wird erst in der echten Kundenversion angebunden.</small>
+      </div>
+      <button class="cart-primary" id="go-checkout" type="button">Weiter zu Abholdaten</button>
+      <button class="cart-secondary js-close-cart" type="button">Weiter auswählen</button>
+    </div>
+    <div class="cart-step cart-step-checkout" data-cart-step="checkout" hidden>
+      <button class="checkout-back" id="checkout-back" type="button">← Zurück zum Warenkorb</button>
+      <div class="checkout-title"><span class="cart-kicker">Fast fertig</span><h2>Abholung</h2><p>Für die Demo werden die Daten nur lokal auf diesem Gerät verarbeitet und nicht versendet.</p></div>
+      <form id="demo-checkout-form" class="checkout-form">
+        <label><span>Name *</span><input name="name" autocomplete="name" required placeholder="Vor- und Nachname"></label>
+        <label><span>Telefon *</span><input name="phone" autocomplete="tel" inputmode="tel" required placeholder="z. B. 0176 12345678"></label>
+        <label><span>Abholzeit *</span><select name="pickup" id="pickup-time" required></select></label>
+        <label><span>Hinweis zur Bestellung</span><textarea name="note" rows="3" placeholder="z. B. bitte ohne Zwiebeln"></textarea></label>
+        <div class="checkout-total"><span>Gesamt</span><strong class="js-cart-total">0,00 €</strong></div>
+        <button class="cart-primary" type="submit">Bestellung prüfen</button>
+      </form>
+    </div>
+    <div class="cart-step cart-step-success" data-cart-step="success" hidden>
+      <div class="demo-success-icon">✓</div>
+      <span class="cart-kicker">Demo-Bestellung vorbereitet</span>
+      <h2>So würde es aussehen.</h2>
+      <p>Es wurde <strong>keine echte Bestellung</strong> an Delfino gesendet.</p>
+      <div class="demo-order-summary" id="demo-order-summary"></div>
+      <button class="cart-primary" id="new-demo-order" type="button">Neue Demo-Bestellung</button>
+      <button class="cart-secondary js-close-cart" type="button">Schließen</button>
+    </div>
+  </aside>
+
+  <div class="option-backdrop" id="option-backdrop" hidden></div>
+  <div class="option-sheet" id="option-sheet" aria-hidden="true">
+    <div class="option-handle"></div>
+    <button class="option-close" id="option-close" type="button" aria-label="Auswahl schließen">×</button>
+    <span class="cart-kicker">Größe wählen</span>
+    <h2 id="option-title">Pizza</h2>
+    <p id="option-desc">Welche Größe darf es sein?</p>
+    <div class="option-buttons">
+      <button type="button" id="option-normal"><span>Normal</span><small>33 cm</small><strong></strong></button>
+      <button type="button" id="option-large"><span>Groß</span><small>40 cm</small><strong></strong></button>
+    </div>
+  </div>
+
   <footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><span class="brand-mark">D</span><div><strong>Delfino</strong><small>Gelateria · Pizzeria</small></div></div><div class="footer-nav"><a href="index.html">Startseite</a><a href="tel:+4989604061">Anrufen</a><a href="https://www.instagram.com/eiscafedelfino/" target="_blank" rel="noopener">Instagram</a></div><div class="footer-legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Eiscafé Delfino</span><span>Hauptstraße 55 · 85579 Neubiberg</span></div></footer>
-  <div class="mobile-orderbar single-action"><a class="mobile-order-primary" href="https://eiscafe-delfino.de/bestellen/">Online bestellen</a></div>
-  <script>
+  <button class="demo-cart-bar js-open-cart" type="button" aria-label="Warenkorb öffnen">
+    <span class="demo-cart-icon">🛒<b class="js-cart-count">0</b></span>
+    <span class="demo-cart-label">Warenkorb</span>
+    <strong class="js-cart-total">0,00 €</strong>
+  </button>
+
+<script>
 (() => {
   const header = document.querySelector('.site-header');
   const menuToggle = document.querySelector('.menu-toggle');
@@ -434,95 +514,73 @@ img{max-width:100%;display:block}
   const revealEls = [...document.querySelectorAll('.reveal')];
   const menuTabs = [...document.querySelectorAll('.menu-tab')];
   const menuCategories = [...document.querySelectorAll('.menu-category')];
-
   if (year) year.textContent = new Date().getFullYear();
 
-  const setHeader = () => {
-    if (!header || header.classList.contains('solid-header')) return;
-    header.classList.toggle('scrolled', window.scrollY > 30);
-  };
-  setHeader();
-  window.addEventListener('scroll', setHeader, { passive: true });
-
-  const closeMenu = () => {
-    if (!menuToggle || !mobileMenu) return;
-    menuToggle.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    mobileMenu.classList.remove('open');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('menu-open');
-  };
-
+  const setHeader = () => { if (header && !header.classList.contains('solid-header')) header.classList.toggle('scrolled', window.scrollY > 30); };
+  setHeader(); window.addEventListener('scroll', setHeader, {passive:true});
+  const closeMenu = () => { if (!menuToggle || !mobileMenu) return; menuToggle.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false'); mobileMenu.classList.remove('open'); mobileMenu.setAttribute('aria-hidden','true'); document.body.classList.remove('menu-open'); };
   if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', () => {
-      const open = !mobileMenu.classList.contains('open');
-      menuToggle.classList.toggle('open', open);
-      menuToggle.setAttribute('aria-expanded', String(open));
-      mobileMenu.classList.toggle('open', open);
-      mobileMenu.setAttribute('aria-hidden', String(!open));
-      document.body.classList.toggle('menu-open', open);
-    });
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-    window.addEventListener('resize', () => { if (window.innerWidth > 980) closeMenu(); });
+    menuToggle.addEventListener('click',()=>{const open=!mobileMenu.classList.contains('open');menuToggle.classList.toggle('open',open);menuToggle.setAttribute('aria-expanded',String(open));mobileMenu.classList.toggle('open',open);mobileMenu.setAttribute('aria-hidden',String(!open));document.body.classList.toggle('menu-open',open);});
+    mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+    window.addEventListener('resize',()=>{if(window.innerWidth>980)closeMenu();});
   }
-
   if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: .12, rootMargin: '0px 0px -40px' });
-    revealEls.forEach((el, i) => {
-      el.style.transitionDelay = `${Math.min(i % 4, 3) * 60}ms`;
-      observer.observe(el);
-    });
-  } else {
-    revealEls.forEach(el => el.classList.add('visible'));
-  }
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12,rootMargin:'0px 0px -40px'});
+    revealEls.forEach((el,i)=>{el.style.transitionDelay=`${Math.min(i%4,3)*60}ms`;observer.observe(el);});
+  } else revealEls.forEach(el=>el.classList.add('visible'));
 
   if (menuTabs.length && menuCategories.length) {
-    const validCategories = new Set(menuCategories.map(cat => cat.dataset.category));
-
-    const activateCategory = (filter, scrollToCategory = false) => {
-      menuTabs.forEach(t => t.classList.toggle('active', t.dataset.filter === filter));
-      menuCategories.forEach(cat => {
-        cat.classList.toggle('hidden', filter !== 'all' && cat.dataset.category !== filter);
-      });
-
-      if (scrollToCategory && filter !== 'all') {
-        const target = document.getElementById(filter);
-        if (target) {
-          window.setTimeout(() => {
-            const stickyTabs = document.querySelector('.menu-tabs-wrap');
-            const offset = (stickyTabs ? stickyTabs.offsetHeight : 0) + 18;
-            const top = target.getBoundingClientRect().top + window.scrollY - offset;
-            window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
-          }, 40);
-        }
-      }
-    };
-
-    menuTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const filter = tab.dataset.filter;
-        activateCategory(filter);
-        if (window.innerWidth < 680) {
-          const top = document.querySelector('.menu-tabs-wrap').getBoundingClientRect().bottom + window.scrollY + 16;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
-      });
-    });
-
-    const requestedCategory = decodeURIComponent(window.location.hash.slice(1));
-    if (validCategories.has(requestedCategory)) {
-      activateCategory(requestedCategory, true);
-    }
+    const valid=new Set(menuCategories.map(cat=>cat.dataset.category));
+    const activate=(filter,scroll=false)=>{menuTabs.forEach(t=>t.classList.toggle('active',t.dataset.filter===filter));menuCategories.forEach(cat=>cat.classList.toggle('hidden',filter!=='all'&&cat.dataset.category!==filter));if(scroll&&filter!=='all'){const target=document.getElementById(filter);if(target)setTimeout(()=>{const sticky=document.querySelector('.menu-tabs-wrap');const off=(sticky?sticky.offsetHeight:0)+18;window.scrollTo({top:Math.max(0,target.getBoundingClientRect().top+scrollY-off),behavior:'auto'});},40);}};
+    menuTabs.forEach(tab=>tab.addEventListener('click',()=>{activate(tab.dataset.filter);if(innerWidth<680){const wrap=document.querySelector('.menu-tabs-wrap');window.scrollTo({top:wrap.getBoundingClientRect().bottom+scrollY+16,behavior:'smooth'});}}));
+    const hash=decodeURIComponent(location.hash.slice(1)); if(valid.has(hash)) activate(hash,true);
   }
-})();
 
+  const STORAGE='delfino-demo-cart-v007';
+  const euro=n=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(Number(n)||0);
+  let cart=[];
+  try{cart=JSON.parse(localStorage.getItem(STORAGE)||'[]'); if(!Array.isArray(cart))cart=[];}catch{cart=[];}
+  const save=()=>{try{localStorage.setItem(STORAGE,JSON.stringify(cart));}catch{}};
+  const cartDrawer=document.getElementById('cart-drawer'), backdrop=document.getElementById('cart-backdrop'), lines=document.getElementById('cart-lines'), empty=document.getElementById('cart-empty'), checkoutBtn=document.getElementById('go-checkout');
+  const optionSheet=document.getElementById('option-sheet'), optionBackdrop=document.getElementById('option-backdrop');
+  let pending=null;
+  const total=()=>cart.reduce((s,i)=>s+i.price*i.qty,0), count=()=>cart.reduce((s,i)=>s+i.qty,0);
+  const toast=(msg)=>{let el=document.querySelector('.cart-toast');if(!el){el=document.createElement('div');el.className='cart-toast';document.body.appendChild(el);}el.textContent=msg;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),1500);};
+  const setStep=name=>document.querySelectorAll('[data-cart-step]').forEach(el=>el.hidden=el.dataset.cartStep!==name);
+  const render=()=>{
+    document.querySelectorAll('.js-cart-count').forEach(el=>el.textContent=count());
+    document.querySelectorAll('.js-cart-total').forEach(el=>el.textContent=euro(total()));
+    if(!lines)return; lines.innerHTML='';
+    cart.forEach((item,idx)=>{const row=document.createElement('div');row.className='cart-line';row.innerHTML=`<div><h3>${escapeHtml(item.name)}</h3><small>${escapeHtml(item.variant||item.category||'')}</small></div><div class="cart-line-price">${euro(item.price*item.qty)}</div><div class="cart-line-bottom"><div class="qty-control"><button type="button" data-action="minus" data-index="${idx}" aria-label="Menge reduzieren">−</button><span>${item.qty}</span><button type="button" data-action="plus" data-index="${idx}" aria-label="Menge erhöhen">+</button></div><button type="button" class="remove-line" data-action="remove" data-index="${idx}">Entfernen</button></div>`;lines.appendChild(row);});
+    empty.hidden=cart.length>0; if(checkoutBtn)checkoutBtn.disabled=!cart.length; save();
+  };
+  function escapeHtml(v){return String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[c]));}
+  const add=(product,variant='',price=product.price)=>{const key=`${product.name}|${variant}`;const found=cart.find(i=>i.key===key);if(found)found.qty++;else cart.push({key,name:product.name,category:product.category,variant,price:Number(price),qty:1});render();toast(`${product.name} hinzugefügt`);};
+  const openCart=()=>{setStep('cart');cartDrawer.classList.add('open');cartDrawer.setAttribute('aria-hidden','false');backdrop.hidden=false;requestAnimationFrame(()=>document.body.classList.add('cart-open'));render();};
+  const closeCart=()=>{cartDrawer.classList.remove('open');cartDrawer.setAttribute('aria-hidden','true');backdrop.hidden=true;document.body.classList.remove('cart-open');};
+  document.querySelectorAll('.js-open-cart').forEach(b=>b.addEventListener('click',openCart));
+  document.querySelectorAll('.js-close-cart').forEach(b=>b.addEventListener('click',closeCart)); if(backdrop)backdrop.addEventListener('click',closeCart);
+  if(lines)lines.addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const i=Number(b.dataset.index);if(!cart[i])return;if(b.dataset.action==='plus')cart[i].qty++;if(b.dataset.action==='minus'){cart[i].qty--;if(cart[i].qty<=0)cart.splice(i,1);}if(b.dataset.action==='remove')cart.splice(i,1);render();});
+
+  const openOptions=product=>{pending=product;document.getElementById('option-title').textContent=product.name;const normal=document.getElementById('option-normal'),large=document.getElementById('option-large');normal.querySelector('strong').textContent=euro(product.price);large.querySelector('strong').textContent=euro(product.large);optionSheet.classList.add('open');optionSheet.setAttribute('aria-hidden','false');optionBackdrop.hidden=false;document.body.classList.add('option-open');};
+  const closeOptions=()=>{optionSheet.classList.remove('open');optionSheet.setAttribute('aria-hidden','true');optionBackdrop.hidden=true;document.body.classList.remove('option-open');pending=null;};
+  document.querySelectorAll('.add-product-btn').forEach(btn=>btn.addEventListener('click',()=>{const p={name:btn.dataset.name,category:btn.dataset.category,price:Number(btn.dataset.price),large:btn.dataset.priceLarge?Number(btn.dataset.priceLarge):null};if(p.large)openOptions(p);else add(p);}));
+  document.getElementById('option-close')?.addEventListener('click',closeOptions); optionBackdrop?.addEventListener('click',closeOptions);
+  document.getElementById('option-normal')?.addEventListener('click',()=>{if(pending){add(pending,'Normal · 33 cm',pending.price);closeOptions();}});
+  document.getElementById('option-large')?.addEventListener('click',()=>{if(pending){add(pending,'Groß · 40 cm',pending.large);closeOptions();}});
+
+  const pickup=document.getElementById('pickup-time');
+  const buildTimes=()=>{if(!pickup)return;pickup.innerHTML='<option value="">Abholzeit wählen</option>';for(let m=11*60+30;m<=20*60+30;m+=15){const h=String(Math.floor(m/60)).padStart(2,'0'),min=String(m%60).padStart(2,'0');const o=document.createElement('option');o.value=o.textContent=`${h}:${min} Uhr`;pickup.appendChild(o);}};buildTimes();
+  checkoutBtn?.addEventListener('click',()=>{if(!cart.length)return;setStep('checkout');}); document.getElementById('checkout-back')?.addEventListener('click',()=>setStep('cart'));
+  document.getElementById('demo-checkout-form')?.addEventListener('submit',e=>{e.preventDefault();if(!cart.length){setStep('cart');return;}const fd=new FormData(e.currentTarget),summary=document.getElementById('demo-order-summary');summary.innerHTML=`<p><strong>${escapeHtml(fd.get('name'))}</strong> · ${escapeHtml(fd.get('phone'))}</p><p>Abholung: <strong>${escapeHtml(fd.get('pickup'))}</strong></p>${fd.get('note')?`<p>Hinweis: ${escapeHtml(fd.get('note'))}</p>`:''}<ul>${cart.map(i=>`<li><span>${i.qty}× ${escapeHtml(i.name)}${i.variant?` · ${escapeHtml(i.variant)}`:''}</span><strong>${euro(i.price*i.qty)}</strong></li>`).join('')}<li><span>Gesamt</span><strong>${euro(total())}</strong></li></ul>`;setStep('success');});
+  document.getElementById('new-demo-order')?.addEventListener('click',()=>{cart=[];save();render();document.getElementById('demo-checkout-form')?.reset();buildTimes();setStep('cart');});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(optionSheet?.classList.contains('open'))closeOptions();else if(cartDrawer?.classList.contains('open'))closeCart();}});
+  render();
+
+  // If the user entered through an "Online bestellen" CTA, go straight to the menu/order section.
+  const params=new URLSearchParams(location.search); if(params.get('bestellen')==='1') setTimeout(()=>document.getElementById('bestellen')?.scrollIntoView({behavior:'smooth',block:'start'}),180);
+})();
 </script>
+
 </body>
 </html>
