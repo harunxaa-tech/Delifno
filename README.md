@@ -1,4 +1,4 @@
-# Eiscafé Delfino – GitHub Version 008
+# Eiscafé Delfino – GitHub Version 010
 
 Verkaufsfähige Demo mit echtem, getrenntem Supabase-Testbackend.
 
@@ -21,4 +21,19 @@ Der Service-/Secret-Key befindet sich niemals in dieser ZIP.
 ## Betrieb
 `betrieb.html` ist nicht auf der Kundenseite verlinkt. Ohne gültigen Supabase-Login und aktives `staff_profiles`-Profil sind keine Bestellungen sichtbar.
 
-Version: 008
+Version: 010
+
+
+## Version 010
+- Aktuelle Instagram Spezialkarte mit 10 Empfehlungen integriert und direkt bestellbar.
+- Startseite auf „Seit 2008“ aktualisiert.
+- Backend Preise der neuen Empfehlungen liegen serverseitig in Supabase.
+- favicon.svg und site.webmanifest ergänzt, damit alle lokalen Referenzen vollständig sind.
+
+
+## Bestellzeiten-Schutz (010)
+- Online-Bestellungen serverseitig nur Dienstag–Sonntag 11:30–20:30 Uhr.
+- Montag geschlossen.
+- Abholzeiten werden ebenfalls gegen den Wochenplan geprüft.
+- Sonder-Schließtage können in Supabase gepflegt werden.
+- Außerhalb der Zeiten erscheint auf der Speisekarte ein deutlicher Hinweis; der Checkout ist gesperrt.
