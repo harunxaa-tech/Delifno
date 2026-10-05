@@ -1,9 +1,0 @@
-DELFINO MODERN GITHUB v007
-
-1. GitHub-Repository leeren (alte Dateien löschen und committen).
-2. Diese ZIP entpacken.
-3. ALLE Dateien aus dem entpackten Ordner direkt in den ROOT von main hochladen.
-4. Commit changes.
-5. GitHub Pages kurz neu laden lassen.
-
-Wichtig: keine PHP-/WordPress-Dateien mit hochladen.
