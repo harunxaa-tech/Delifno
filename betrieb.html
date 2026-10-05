@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#171512">
+<meta name="robots" content="noindex,nofollow">
+<title>Delfino · Betrieb</title>
+<style>
+:root{--bg:#f2ede4;--paper:#fffdf9;--ink:#1c1916;--muted:#796f64;--line:rgba(28,25,22,.12);--red:#c94739;--green:#6e8566;--gold:#b58b50;--shadow:0 18px 60px rgba(27,21,15,.12)}
+*{box-sizing:border-box}html{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}body{margin:0;min-height:100vh}
+button,input{font:inherit}.hidden{display:none!important}.shell{width:min(1320px,calc(100vw - 32px));margin:auto}
+.login-screen{min-height:100vh;display:grid;place-items:center;padding:30px;background:radial-gradient(circle at 20% 10%,#fff9ed,transparent 45%),var(--bg)}
+.login-card{width:min(460px,100%);background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:32px;box-shadow:var(--shadow)}
+.brand{display:flex;align-items:center;gap:13px;margin-bottom:30px}.mark{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font:italic 34px Georgia,serif}.brand strong{display:block;font:29px Georgia,serif}.brand small{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em}
+.login-card h1{font:42px Georgia,serif;font-weight:400;letter-spacing:-.03em;margin:0 0 8px}.login-card>p{color:var(--muted);font-size:13px;line-height:1.55;margin:0 0 24px}
+.field{display:grid;gap:7px;margin:13px 0}.field span{font-size:10px;font-weight:850;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.field input{height:50px;border:1px solid var(--line);border-radius:14px;background:white;padding:0 14px;outline:none}.field input:focus{border-color:#777;box-shadow:0 0 0 3px rgba(28,25,22,.06)}
+.primary{width:100%;border:0;border-radius:999px;background:var(--ink);color:white;min-height:52px;font-weight:850;margin-top:8px;cursor:pointer}.login-error{min-height:20px;color:var(--red);font-size:11px;margin:12px 0 0}
+.app{padding:22px 0 60px}.topbar{display:flex;align-items:center;gap:18px;justify-content:space-between;background:rgba(255,253,249,.88);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:22px;padding:14px 16px;position:sticky;top:10px;z-index:20;box-shadow:0 8px 30px rgba(20,15,10,.06)}
+.top-left{display:flex;align-items:center;gap:12px}.top-left .mark{width:42px;height:42px;font-size:27px}.top-title strong{display:block}.top-title span{font-size:10px;color:var(--muted)}.top-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.pill-btn{border:1px solid var(--line);background:white;border-radius:999px;min-height:40px;padding:0 14px;font-weight:800;font-size:11px;cursor:pointer}.pill-btn.accent{background:var(--red);color:white;border-color:var(--red)}.pill-btn.on{background:var(--green);color:white}
+.dashboard-head{padding:48px 4px 24px;display:flex;align-items:end;justify-content:space-between;gap:24px}.dashboard-head h1{font:clamp(48px,8vw,92px) Georgia,serif;font-weight:400;letter-spacing:-.055em;line-height:.88;margin:0}.dashboard-head p{max-width:470px;color:var(--muted);font-size:13px;line-height:1.55}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.stat{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px}.stat span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:850}.stat strong{font:32px Georgia,serif;font-weight:400;display:block;margin-top:7px}
+.toolbar{display:flex;gap:9px;margin:18px 0;overflow:auto;padding-bottom:3px}.filter{white-space:nowrap;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:10px 16px;font-weight:800;font-size:11px;cursor:pointer}.filter.active{background:var(--ink);color:white}
+.orders{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.order-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 8px 30px rgba(20,15,10,.04)}.order-card.new{border:2px solid var(--red);box-shadow:0 12px 38px rgba(201,71,57,.13)}
+.order-head{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.order-num{font:38px Georgia,serif;letter-spacing:-.04em}.order-time{font-size:10px;color:var(--muted);margin-top:3px}.status{border-radius:999px;padding:7px 10px;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;background:#eee}.status.new{background:#f8ddd9;color:#9e3026}.status.accepted{background:#efe1bd;color:#6e551b}.status.preparing{background:#e8dfce;color:#70552f}.status.ready{background:#dbe8d7;color:#496343}.status.completed{background:#e2e2e2;color:#555}.status.cancelled{background:#eee;color:#888}
+.customer{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:17px 0;padding:13px;border-radius:14px;background:#f6f1e9}.customer span{display:block;font-size:9px;color:var(--muted);text-transform:uppercase;font-weight:800;margin-bottom:3px}.customer strong{font-size:12px}.items{border-top:1px solid var(--line)}.item{display:grid;grid-template-columns:auto 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:12px}.item .qty{font-weight:900}.item small{display:block;color:var(--muted);margin-top:3px}.total{display:flex;justify-content:space-between;align-items:center;padding:15px 0}.total strong{font-size:20px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.action{border:1px solid var(--line);border-radius:13px;background:white;min-height:44px;font-weight:850;font-size:11px;cursor:pointer}.action.main{background:var(--ink);color:white;border-color:var(--ink)}.action.cancel{color:var(--red)}
+.note{padding:10px 12px;border-left:3px solid var(--gold);background:#faf3e6;border-radius:8px;font-size:11px;margin:10px 0}.empty-state{grid-column:1/-1;text-align:center;padding:80px 20px;color:var(--muted);background:var(--paper);border:1px dashed var(--line);border-radius:24px}
+.connection{font-size:9px;font-weight:800;color:var(--muted)}.connection.live{color:var(--green)}
+@media(max-width:850px){.orders{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.dashboard-head{display:block}.dashboard-head p{margin-top:18px}.topbar{align-items:flex-start}.top-actions{max-width:58%}}
+@media(max-width:520px){.shell{width:min(100% - 20px,1320px)}.stats{gap:8px}.stat{padding:14px}.stat strong{font-size:26px}.top-title span{display:none}.pill-btn{padding:0 11px}.order-card{padding:16px}.customer{grid-template-columns:1fr}.dashboard-head{padding-top:34px}}
+</style>
+</head>
+<body>
+<section class="login-screen" id="login-screen">
+  <form class="login-card" id="login-form">
+    <div class="brand"><span class="mark">D</span><div><strong>Delfino</strong><small>Geschützter Betriebsbereich</small></div></div>
+    <h1>Betrieb</h1><p>Nur für autorisierte Delfino-Mitarbeiter. Kundendaten und Bestellungen sind ohne gültiges Mitarbeiterkonto nicht abrufbar.</p>
+    <label class="field"><span>E-Mail</span><input id="login-email" type="email" autocomplete="username" required></label>
+    <label class="field"><span>Passwort</span><input id="login-password" type="password" autocomplete="current-password" required></label>
+    <button class="primary" type="submit">Sicher anmelden</button>
+    <div class="login-error" id="login-error"></div>
+  </form>
+</section>
+
+<main class="app hidden" id="app">
+  <div class="shell">
+    <header class="topbar">
+      <div class="top-left"><span class="mark">D</span><div class="top-title"><strong>Delfino Betrieb</strong><span id="staff-label">Mitarbeiter</span></div></div>
+      <div class="top-actions">
+        <button class="pill-btn" id="notify-btn" type="button">🔔 Alarm aktivieren</button>
+        <button class="pill-btn" id="refresh-btn" type="button">↻ Aktualisieren</button>
+        <button class="pill-btn" id="logout-btn" type="button">Abmelden</button>
+      </div>
+    </header>
+
+    <section class="dashboard-head">
+      <h1>Bestellungen.</h1>
+      <p>Neue Bestellungen erscheinen live. Der Küchenbon kann sofort gedruckt werden. Vollautomatischer Bondruck wird später mit dem tatsächlichen Druckermodell verbunden.</p>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><span>Neu</span><strong id="stat-new">0</strong></div>
+      <div class="stat"><span>In Arbeit</span><strong id="stat-work">0</strong></div>
+      <div class="stat"><span>Fertig</span><strong id="stat-ready">0</strong></div>
+      <div class="stat"><span>Heute gesamt</span><strong id="stat-all">0</strong></div>
+    </section>
+
+    <div class="toolbar">
+      <button class="filter active" data-filter="open">Offen</button>
+      <button class="filter" data-filter="new">Neu</button>
+      <button class="filter" data-filter="accepted">Angenommen</button>
+      <button class="filter" data-filter="preparing">Zubereitung</button>
+      <button class="filter" data-filter="ready">Fertig</button>
+      <button class="filter" data-filter="completed">Abgeholt</button>
+      <button class="filter" data-filter="all">Alle</button>
+      <span class="connection" id="connection">● verbindet …</span>
+    </div>
+    <section class="orders" id="orders"></section>
+  </div>
+</main>
+
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+const SB_URL='https://dtvshfgnexgyxyyjirko.supabase.co';
+const SB_KEY='sb_publishable_WSupTla5WUNFqjKlfyQ_mQ_HMBn3P8E';
+const sb=createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+const $=s=>document.querySelector(s), escapeHtml=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[c]));
+const euro=c=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format((Number(c)||0)/100);
+const statusLabels={new:'Neu',accepted:'Angenommen',preparing:'Zubereitung',ready:'Fertig',completed:'Abgeholt',cancelled:'Storniert'};
+const nextStatus={new:'accepted',accepted:'preparing',preparing:'ready',ready:'completed'};
+const nextLabel={new:'Annehmen',accepted:'Zubereitung starten',preparing:'Als fertig markieren',ready:'Als abgeholt markieren'};
+let profile=null,orders=[],filter='open',channel=null,audioCtx=null,notifyEnabled=false;
+
+function showLogin(msg=''){ $('#login-screen').classList.remove('hidden');$('#app').classList.add('hidden');$('#login-error').textContent=msg; }
+function showApp(){ $('#login-screen').classList.add('hidden');$('#app').classList.remove('hidden'); }
+async function checkAccess(){
+  const {data:{session}}=await sb.auth.getSession();
+  if(!session){showLogin();return false;}
+  const {data,error}=await sb.from('staff_profiles').select('role,display_name,active').eq('user_id',session.user.id).maybeSingle();
+  if(error||!data?.active){await sb.auth.signOut();showLogin('Dieses Konto hat keine aktive Betriebsberechtigung.');return false;}
+  profile=data;$('#staff-label').textContent=`${data.display_name||session.user.email} · ${data.role}`;showApp();return true;
+}
+$('#login-form').addEventListener('submit',async e=>{
+  e.preventDefault();$('#login-error').textContent='Anmeldung wird geprüft …';
+  const email=$('#login-email').value.trim(),password=$('#login-password').value;
+  const {error}=await sb.auth.signInWithPassword({email,password});
+  if(error){showLogin('Anmeldung fehlgeschlagen. Bitte Zugangsdaten prüfen.');return;}
+  if(await checkAccess()){await startDashboard();}
+});
+$('#logout-btn').addEventListener('click',async()=>{if(channel)await sb.removeChannel(channel);await sb.auth.signOut();location.reload();});
+$('#refresh-btn').addEventListener('click',()=>loadOrders());
+
+function berlinDayISO(){
+  const p=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const o={};p.forEach(x=>{if(x.type!=='literal')o[x.type]=x.value});return `${o.year}-${o.month}-${o.day}`;
+}
+async function loadOrders(){
+  const since=new Date(Date.now()-48*3600*1000).toISOString();
+  const {data,error}=await sb.from('orders').select('*,order_items(*)').gte('created_at',since).order('created_at',{ascending:false}).limit(150);
+  if(error){console.error(error);return;}
+  orders=data||[];render();
+}
+function visible(o){
+  if(filter==='all')return true;
+  if(filter==='open')return !['completed','cancelled'].includes(o.status);
+  return o.status===filter;
+}
+function render(){
+  const today=berlinDayISO();
+  const todayOrders=orders.filter(o=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(o.created_at))===today);
+  $('#stat-new').textContent=todayOrders.filter(o=>o.status==='new').length;
+  $('#stat-work').textContent=todayOrders.filter(o=>['accepted','preparing'].includes(o.status)).length;
+  $('#stat-ready').textContent=todayOrders.filter(o=>o.status==='ready').length;
+  $('#stat-all').textContent=todayOrders.length;
+  const root=$('#orders');root.innerHTML='';
+  const list=orders.filter(visible);
+  if(!list.length){root.innerHTML='<div class="empty-state">Keine Bestellungen in dieser Ansicht.</div>';return;}
+  for(const o of list){
+    const card=document.createElement('article');card.className=`order-card ${o.status}`;
+    const created=new Intl.DateTimeFormat('de-DE',{timeZone:'Europe/Berlin',hour:'2-digit',minute:'2-digit'}).format(new Date(o.created_at));
+    const pickup=new Intl.DateTimeFormat('de-DE',{timeZone:'Europe/Berlin',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}).format(new Date(o.pickup_at));
+    const items=(o.order_items||[]).map(i=>`<div class="item"><span class="qty">${i.quantity}×</span><div><strong>${escapeHtml(i.item_name_snapshot)}</strong><small>${escapeHtml(i.variant_name_snapshot)}${i.note?` · ${escapeHtml(i.note)}`:''}</small></div><strong>${euro(i.line_total_cents)}</strong></div>`).join('');
+    const main=o.status in nextStatus?`<button class="action main" data-status="${nextStatus[o.status]}" data-id="${o.id}">${nextLabel[o.status]}</button>`:'';
+    const cancel=!['completed','cancelled'].includes(o.status)?`<button class="action cancel" data-status="cancelled" data-id="${o.id}">Stornieren</button>`:'';
+    card.innerHTML=`<div class="order-head"><div><div class="order-num">#${o.order_number}</div><div class="order-time">${created} Uhr · ${escapeHtml(o.source||'web')}</div></div><span class="status ${o.status}">${statusLabels[o.status]||o.status}</span></div>
+      <div class="customer"><div><span>Abholung</span><strong>${pickup} Uhr</strong></div><div><span>Kunde</span><strong>${escapeHtml(o.customer_name)} · ${escapeHtml(o.customer_phone)}</strong></div></div>
+      ${o.customer_note?`<div class="note"><strong>Hinweis:</strong> ${escapeHtml(o.customer_note)}</div>`:''}
+      <div class="items">${items}</div><div class="total"><span>Gesamt · bei Abholung</span><strong>${euro(o.total_cents)}</strong></div>
+      <div class="actions">${main}<button class="action" data-print="${o.id}">Küchenbon drucken</button>${cancel}</div>`;
+    root.appendChild(card);
+  }
+}
+async function staffAction(payload){
+  const {data:{session}}=await sb.auth.getSession();
+  if(!session)throw new Error('NOT_AUTHENTICATED');
+  const r=await fetch(`${SB_URL}/functions/v1/staff-order-action`,{
+    method:'POST',
+    headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':`Bearer ${session.access_token}`},
+    body:JSON.stringify(payload)
+  });
+  const data=await r.json().catch(()=>({error:'SERVER_ERROR'}));
+  if(!r.ok||!data?.ok)throw new Error(data?.error||'ACTION_FAILED');
+  return data;
+}
+$('#orders').addEventListener('click',async e=>{
+  const statusBtn=e.target.closest('[data-status]');if(statusBtn){
+    statusBtn.disabled=true;
+    try{await staffAction({action:'set_status',order_id:statusBtn.dataset.id,new_status:statusBtn.dataset.status});}
+    catch(err){console.error(err);alert('Status konnte nicht geändert werden.');}
+    await loadOrders();return;
+  }
+  const printBtn=e.target.closest('[data-print]');if(printBtn){const o=orders.find(x=>x.id===printBtn.dataset.print);if(o)printReceipt(o);}
+});
+document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');filter=b.dataset.filter;render();}));
+
+function printReceipt(o){
+  const items=(o.order_items||[]).map(i=>`<tr><td>${i.quantity}×</td><td><b>${escapeHtml(i.item_name_snapshot)}</b><br><small>${escapeHtml(i.variant_name_snapshot)}${i.note?` · ${escapeHtml(i.note)}`:''}</small></td><td>${euro(i.line_total_cents)}</td></tr>`).join('');
+  const pickup=new Intl.DateTimeFormat('de-DE',{timeZone:'Europe/Berlin',hour:'2-digit',minute:'2-digit'}).format(new Date(o.pickup_at));
+  const w=window.open('','_blank','width=420,height=720');if(!w){alert('Pop-up für Druck blockiert.');return;}
+  w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>Bestellung #${o.order_number}</title><style>body{font:14px ui-monospace,SFMono-Regular,Menlo,monospace;width:78mm;margin:0 auto;padding:8mm 3mm;color:#000}h1{text-align:center;font-size:24px;margin:0}.sub{text-align:center;margin:3px 0 15px}.big{font-size:22px;font-weight:900;border:2px solid #000;padding:8px;text-align:center;margin:12px 0}table{width:100%;border-collapse:collapse}td{padding:8px 0;border-bottom:1px dashed #888;vertical-align:top}td:first-child{width:12%}td:last-child{text-align:right;white-space:nowrap}.total{display:flex;justify-content:space-between;font-size:18px;font-weight:900;margin:15px 0}.note{border:2px solid #000;padding:8px;margin:12px 0}.foot{text-align:center;font-size:11px;margin-top:16px}@media print{body{width:auto;padding:0}}</style></head><body><h1>DELFINO</h1><div class="sub">KÜCHENBON · #${o.order_number}</div><div class="big">ABHOLUNG ${pickup} UHR</div>${o.customer_note?`<div class="note"><b>HINWEIS:</b><br>${escapeHtml(o.customer_note)}</div>`:''}<table>${items}</table><div class="total"><span>GESAMT</span><span>${euro(o.total_cents)}</span></div><div><b>Kunde:</b> ${escapeHtml(o.customer_name)}<br><b>Tel:</b> ${escapeHtml(o.customer_phone)}</div><div class="foot">Erstellt ${new Date().toLocaleString('de-DE')}</div><script>setTimeout(()=>window.print(),250)<\/script></body></html>`);
+  w.document.close();
+}
+async function enableAlerts(){
+  try{audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();await audioCtx.resume();if('Notification'in window&&Notification.permission==='default')await Notification.requestPermission();notifyEnabled=true;$('#notify-btn').textContent='🔔 Alarm aktiv';$('#notify-btn').classList.add('on');}catch{}
+}
+$('#notify-btn').addEventListener('click',enableAlerts);
+function alarm(order){
+  if(!notifyEnabled)return;
+  try{
+    const now=audioCtx.currentTime;[0,0.16,0.32].forEach((d,i)=>{const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.frequency.value=[660,880,660][i];g.gain.setValueAtTime(.0001,now+d);g.gain.exponentialRampToValueAtTime(.22,now+d+.02);g.gain.exponentialRampToValueAtTime(.0001,now+d+.13);o.connect(g).connect(audioCtx.destination);o.start(now+d);o.stop(now+d+.14);});
+  }catch{}
+  if('Notification'in window&&Notification.permission==='granted')new Notification(`Neue Delfino-Bestellung #${order.order_number}`,{body:'Neue Bestellung im Betriebsbereich.'});
+}
+async function startRealtime(){
+  if(channel)await sb.removeChannel(channel);
+  channel=sb.channel('delfino-orders')
+    .on('postgres_changes',{event:'INSERT',schema:'public',table:'orders'},payload=>{alarm(payload.new);loadOrders();})
+    .on('postgres_changes',{event:'UPDATE',schema:'public',table:'orders'},()=>loadOrders())
+    .subscribe(status=>{$('#connection').textContent=status==='SUBSCRIBED'?'● live':'● verbindet …';$('#connection').classList.toggle('live',status==='SUBSCRIBED');});
+}
+async function startDashboard(){await loadOrders();await startRealtime();}
+if(await checkAccess())await startDashboard();
+</script>
+</body>
+</html>

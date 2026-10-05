@@ -1,0 +1,18 @@
+DELFINO BACKEND – VERSION 008
+================================
+
+Supabase Projekt: Delfino
+Projekt-Ref: dtvshfgnexgyxyyjirko
+Region: eu-central-1 (Frankfurt)
+
+WICHTIG:
+- AngebotsPilot ist ein komplett anderes Supabase-Projekt und wurde nicht verändert.
+- In dieser GitHub-ZIP befindet sich ausschließlich ein öffentlicher Publishable Key.
+- Der geheime Service-Key befindet sich nur serverseitig in Supabase Edge Functions.
+- Kunden können keine Preise oder Bestellsummen in der Datenbank setzen.
+- `betrieb.html` ist nicht öffentlich verlinkt und zeigt ohne autorisierten Staff-Login keinerlei Bestelldaten.
+- Automatischer physischer Bondruck benötigt später das konkrete Druckermodell / eine lokale Print-Bridge.
+
+Edge Functions:
+- place-order
+- order-status
